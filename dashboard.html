@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <h1>Welcome, SHLOK KULKARNI!</h1>
+      <p>Your personalized student dashboard at Vishwakarma Institute of Technology, Pune.</p>
+    </header>
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+      <h3>Your Profile</h3>
+      <p><strong>Name:</strong> SHLOK KULKARNI</p>
+      <p><strong>ID:</strong> 12414442</p>
+      <p><strong>Course:</strong> AI&DS "D"</p>
+    </section>
+
+    <!-- Main Features -->
+    <div class="grid">
+      <div class="card" onclick="markAttendance()">
+        <h3>Mark Attendance</h3>
+        <p>Tap to mark your attendance using face recognition.</p>
+      </div>
+      <div class="card">
+        <h3>View Timetable</h3>
+        <p>Check your class schedules and exam timetables.</p>
+      </div>
+      <div class="card">
+        <h3>Academic Records</h3>
+        <p>Access your grades, certificates, and assignments.</p>
+      </div>
+      <div class="card">
+        <h3>Pay Fees</h3>
+        <p>Securely pay your college fees online.</p>
+      </div>
+      <div class="card">
+        <h3>Feedback</h3>
+        <p>Provide feedback for events and teaching quality.</p>
+      </div>
+      <div class="card">
+        <h3>Upcoming Events</h3>
+        <p>See upcoming workshops and college events.</p>
+      </div>
+    </div>
+
+    <!-- Announcements Section -->
+    <section class="announcements">
+      <h2>Announcements</h2>
+      <ul>
+        <li>📢 Workshop on AI and ML on 25th Jan 2025</li>
+        <li>📢 Exam schedule for 18 Feb released!</li>
+        <li>📢 Library books due date extended to 31st Jan 2025.</li>
+      </ul>
+    </section>
+
+    <!-- Calendar -->
+    <section class="calendar-section">
+      <h2>Calendar</h2>
+      <div class="calendar-placeholder">Mini Calendar</div>
+    </section>
+  </div>
+
+  <script>
+    function markAttendance() {
+      // Replace this path with the OpenCV script or system endpoint
+      window.location.href = "attendance.html";
+    }
+  </script>
+</body>
+</html>

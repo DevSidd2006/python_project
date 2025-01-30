@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Vishwakarma Institute of Technology, Pune</h1>
+      <p>Streamline your college life with our all-in-one platform!</p>
+    </div>
+    <div class="login-box">
+      <h2>Login</h2>
+      <p class="subtitle">Use your college-provided login ID and password</p>
+      <form onsubmit="return validateLogin()">
+        <div class="input-box">
+          <label for="username">Login ID</label>
+          <input type="text" id="username" placeholder="Enter your Login ID" required>
+        </div>
+        <div class="input-box">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your Password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function validateLogin() {
+      // Dummy credentials for demonstration
+      const validCredentials = {
+        username: "student",
+        password: "password123"
+      };
+
+      // Get input values
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Validate credentials
+      if (username === validCredentials.username && password === validCredentials.password) {
+        // Redirect to dashboard
+        window.location.href = "dashboard.html";
+        return false; // Prevent form submission
+      } else {
+        alert("Invalid Login ID or Password");
+        return false; // Prevent form submission
+      }
+    }
+  </script>
+</body>
+</html>

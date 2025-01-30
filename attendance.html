@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark Attendance</title>
+  <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+  <div class="attendance-container">
+    <h1>Face Recognition Attendance</h1>
+    <p>Stand in front of the camera to mark your attendance.</p>
+    <button onclick="startAttendance()">Start Attendance</button>
+  </div>
+
+  <script>
+    function startAttendance() {
+      // Call the OpenCV system here
+      fetch("http://localhost:5000/start-attendance")
+        .then(response => {
+          if (response.ok) {
+            alert("Attendance marked successfully!");
+          } else {
+            alert("Error in marking attendance.");
+          }
+        })
+        .catch(error => console.error("Error:", error));
+    }
+  </script>
+</body>
+</html>
