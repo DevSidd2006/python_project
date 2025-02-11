@@ -44,6 +44,25 @@ app.listen(8000, () => {
   console.log('Server is running on port 8000');
 });
 
+    chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    // Marking the listener to send a response asynchronously
+    let async = true;
+    if (message === 'startAttendance') {
+        startAttendance().then(response => {
+            sendResponse(response);
+        }).catch(error => {
+            console.error(error);
+            sendResponse({error: error.message});
+        });
+    }
+    return async; // Indicating that we'll respond asynchronously
+});
+
+async function startAttendance() {
+    // Your async logic here
+    return { success: true };
+}
+
   </script>
 </body>
 </html>
